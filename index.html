@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+rect {
+  stroke: #fff;
+}
+
+</style>
+
+<head>
+    <script src="//d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="js/DrawICicle.js"></script>
+    <link href="style_tabla.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <h1>Distribucion porcentual de las diferentes categorias y tipos de comparendos en la ciudad de Bogota</h1><br><br>
+    <p>
+      En la actualidad, el Ministerio de Transporte ha dispuesto 9 categorias de comparendos, nombradas de la letra A a la I para realizar la clasificacion dependiendo de los montos
+      a pagar para cada infractor, asi como la gravedad de la infraccion cometida, siendo A la de menor valor e I la de mayor valor.<br><br>
+      Las categorias aplican a diferentes actores viales segun la siguiente informacion:<br>
+        <table>
+            <tr>
+                <th>CAGEGORIA</th>
+                 <th>APLICA PARA</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>CONDUCTOR VEHICULO NO AUTOMOTOR O TRACCION ANIMAL</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>CONDUCTOR Y/O PROPIETARIO DE UN VEHICULO AUTOMOTOR</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>CONDUCTOR Y/O PROPIETARIO DE UN VEHICULO AUTOMOTOR</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>CONDUCTOR Y/O PROPIETARIO DE UN VEHICULO AUTOMOTOR</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>CONDUCTOR Y/O PROPIETARIO DE UN VEHICULO AUTOMOTOR</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>PEATONES</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>PEATON-CONDUCTOR-PASAJERO</td>
+            </tr>
+            <tr>
+                <td>H</td>
+                <td>PEATON-CONDUCTOR-PASAJERO</td>
+            </tr>
+            <tr>
+                <td>I</td>
+                <td>CONDUCTOR Y/O PROPIETARIO DE UN VEHICULO AUTOMOTOR</td>
+            </tr>          
+          </table>
+    
+    <br>A su vez, cada una de estas categorias se divide en varios tipos de comparendo, por ejemplo A01 corresponde a "No transitar por la derecha de la via", A02 a "Agarrarse de otro vehiculo en circulacion".
+    <br><br> A continuacion podras hace comparaciones entre porcentajes para diferentes años, categorias y tipos de comparendo. Cada recuadro asignado para un año especifico es un modulo
+    <br>independiente de los demas, por lo que puedes interactuar por separado en cada uno de ellos, haciendo clic sobre cada categoria para obtener un zoom a la misma y el valor del porcentaje
+    <br>
+    <br>
+    </p>
+    
+    <h1>AÑO 2015</h1>
+    <div id="breadcrumb2015"></div>
+    <div id="icicle2015"></div>
+    <h1>AÑO 2016</h1>
+    <div id="breadcrumb2016"></div>
+    <div id="icicle2016"></div>
+    <h1>AÑO 2017</h1>
+    <div id="breadcrumb2017"></div>
+    <div id="icicle2017"></div>
+    <script>
+        seccionbread = "breadcrumb2015"
+        seccionicle = "icicle2015"
+        secciontrail = "trail2015"
+        seccionlabel = "label2015"
+        archivo = "Todos2015"
+        dibujar(seccionbread,seccionicle,secciontrail,seccionlabel,archivo);
+        seccionbread = "breadcrumb2016"
+        seccionicle = "icicle2016"
+        secciontrail = "trail2016"
+         seccionlabel = "label2016"
+          archivo = "Todos2016"
+        dibujar(seccionbread,seccionicle,secciontrail,seccionlabel,archivo);
+        seccionbread = "breadcrumb2017"
+        seccionicle = "icicle2017"
+        secciontrail = "trail2017"
+         seccionlabel = "label2017"
+          archivo = "Todos2017"
+        dibujar(seccionbread,seccionicle,secciontrail,seccionlabel,archivo);
+    </script>
+</body>
